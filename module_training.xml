@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_training" default="compile.module.training">
+  <dirname property="module.training.basedir" file="${ant.file.module_training}"/>
+  
+  <property name="module.jdk.home.training" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.training" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.training" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.training" value="-encoding UTF-8 -source 1.6 ${compiler.args}"/>
+  
+  <property name="training.output.dir" value="${module.training.basedir}/out/production/Training"/>
+  <property name="training.testoutput.dir" value="${module.training.basedir}/out/test/Training"/>
+  
+  <path id="training.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="training.module.production.classpath">
+    <path refid="${module.jdk.classpath.training}"/>
+  </path>
+  
+  <path id="training.runtime.production.module.classpath">
+    <pathelement location="${training.output.dir}"/>
+  </path>
+  
+  <path id="training.module.classpath">
+    <path refid="${module.jdk.classpath.training}"/>
+    <pathelement location="${training.output.dir}"/>
+  </path>
+  
+  <path id="training.runtime.module.classpath">
+    <pathelement location="${training.testoutput.dir}"/>
+    <pathelement location="${training.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.training">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.training">
+    <patternset refid="excluded.from.module.training"/>
+  </patternset>
+  
+  <path id="training.module.sourcepath">
+    <dirset dir="${module.training.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.training" depends="compile.module.training.production,compile.module.training.tests" description="Compile module Training"/>
+  
+  <target name="compile.module.training.production" depends="register.custom.compilers" description="Compile module Training; production classes">
+    <mkdir dir="${training.output.dir}"/>
+    <javac2 destdir="${training.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.training}/javac">
+      <compilerarg line="${compiler.args.training}"/>
+      <bootclasspath refid="training.module.bootclasspath"/>
+      <classpath refid="training.module.production.classpath"/>
+      <src refid="training.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.training"/>
+    </javac2>
+    
+    <copy todir="${training.output.dir}">
+      <fileset dir="${module.training.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.training.tests" depends="register.custom.compilers,compile.module.training.production" description="compile module Training; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.training" description="cleanup module">
+    <delete dir="${training.output.dir}"/>
+    <delete dir="${training.testoutput.dir}"/>
+  </target>
+</project>

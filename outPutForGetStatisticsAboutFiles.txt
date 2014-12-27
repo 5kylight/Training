@@ -1,0 +1,5 @@
+114185782 /home/tom/Pulpit/Rektrutacja 2014/greenote1.war
+97824645 /home/tom/Pulpit/Rektrutacja 2014/BitBucket/.git/objects/c5/2e0d4e1628d6d6bf7f376c5601f6a3468dd523
+97809467 /home/tom/Pulpit/Rektrutacja 2014/BitBucket/GreeNote/war/greenote.war
+61514495 /home/tom/Pulpit/Rektrutacja 2014/BitBucket/GreeNote/gwt-unitCache/gwt-unitCache-9b639813b8e6c5b569e45b135c8a1737ac4816c5-00000146ED446FF5
+48907032 /home/tom/Pulpit/Rektrutacja 2014/BitBucket/.git/objects/88/e1523e7df168e2561eec54ce1eadeac46ddb52
