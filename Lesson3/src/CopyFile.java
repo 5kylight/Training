@@ -8,7 +8,7 @@ public class CopyFile {
         FileOutputStream outputStream = null;
 
         try (FileInputStream stream = new FileInputStream(new File(Path))) {
-            outputStream = new FileOutputStream(new File(Path+"copy"));
+            outputStream = new FileOutputStream(new File(Path+".copy"));
             byte[] buffer = new byte[1024];
             int length;
             while((length = stream.read(buffer))> 0){

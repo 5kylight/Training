@@ -1,3 +1,3 @@
 #!/bin/bash
 
-java bin/Logging.class
+java bin	/Logging.class
