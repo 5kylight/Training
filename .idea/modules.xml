@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ITCareer/ITCareer.iml" filepath="$PROJECT_DIR$/ITCareer/ITCareer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson 6/Lesson 6.iml" filepath="$PROJECT_DIR$/Lesson 6/Lesson 6.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson1/Lesson1.iml" filepath="$PROJECT_DIR$/Lesson1/Lesson1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson2/Lesson2.iml" filepath="$PROJECT_DIR$/Lesson2/Lesson2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson3/Lesson3.iml" filepath="$PROJECT_DIR$/Lesson3/Lesson3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lesson4_Graphs/Lesson4_Graphs.iml" filepath="$PROJECT_DIR$/Lesson4_Graphs/Lesson4_Graphs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lesson5a/Lesson5a.iml" filepath="$PROJECT_DIR$/Lesson5a/Lesson5a.iml" />
       <module fileurl="file://$PROJECT_DIR$/Training.iml" filepath="$PROJECT_DIR$/Training.iml" />
     </modules>
   </component>
