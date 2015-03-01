@@ -54,5 +54,6 @@ public class ScalarProduct {
 
         System.out.println(result);
 
+
     }
 }
