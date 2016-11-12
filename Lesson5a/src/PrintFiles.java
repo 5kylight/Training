@@ -54,7 +54,7 @@ public class PrintFiles {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        result.forEach((k,v) -> System.out.println(v+" was find in " + k ));
+        result.forEach((k,v) -> System.out.println(v+" was found in " + k ));
     }
 
 
